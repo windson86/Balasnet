@@ -1,5 +1,5 @@
 import Auth from "../utils/auth";
-const host = "https://balasnet.herokuapp.com/";
+const host = "";
 
 async function register(username, email, password) {
   const res = await window.fetch(host + "auth/signup", {
