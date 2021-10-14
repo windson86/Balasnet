@@ -11,7 +11,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import thunk from "redux-thunk";
 import createLogger from "redux-logger";
-import registerServiceWorker from "./registerServiceWorker";
+//import registerServiceWorker from "./registerServiceWorker";
 const store = createStore(
   combineReducers(reducers),
   applyMiddleware(thunk, createLogger)
@@ -26,4 +26,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-registerServiceWorker();
+//registerServiceWorker();
