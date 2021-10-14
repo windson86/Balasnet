@@ -2,7 +2,7 @@ import React from 'react'
 import {Link, NavLink} from 'react-router-dom'
 
 const Navbar = (props) => {
-  const {loggedIn, logout,level} = props
+  const {loggedIn, logout,level,username} = props
 
   return (
     <header>
@@ -19,8 +19,8 @@ const Navbar = (props) => {
         
           
              
-              
-        {loggedIn &&<NavLink className='nav-link-logout' onClick={logout} to='/'>Logout</NavLink>}
+              {loggedIn &&<NavLink className='nav-link'  to='/settings'>{username}</NavLink>}
+        {loggedIn &&<NavLink className='nav-link' onClick={logout} to='/'>Logout</NavLink>}
               {!loggedIn && <NavLink className='nav-link' to='/login'>Login</NavLink>}
               {!loggedIn && <NavLink className='nav-link' to='/register'>Register</NavLink>}
            

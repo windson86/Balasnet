@@ -69,6 +69,7 @@ class App extends Component {
       <div className='App'>
        
      <Navbar
+     username={Auth.getUsername()}
      level={level}
      logout={this.logout}
      loggedIn={this.state.loggedIn}
