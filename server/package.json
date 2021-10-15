@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "12.18.3",
+    "npm": "6.14.6"
+},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd client && npm run build",
-    "instal-client": "cd client && npm install",
-    "heroku-postbuild": "npm run instal-client && npm run build",
-    "client": "cd client && npm start",
+    
+   
     "start": "node index.js",
-    "dev": "concurrently -n 'server,client' -c 'red,green' \"nodemon index.js\" \"cd client && yarn start\""
+    "dev": "concurrently -n 'server,client' -c 'red,green' \"nodemon index.js\" \"cd ../client && yarn start\""
   },
   "author": "",
   "license": "ISC",
