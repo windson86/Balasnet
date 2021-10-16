@@ -1,16 +1,18 @@
-const path = require('path')
+const path = require("path");
+const dotenv = require("dotenv");
+let rootPath = path.normalize(path.join(__dirname, "/../"));
 
-let rootPath = path.normalize(path.join(__dirname, '/../'))
+dotenv.config();
 
 module.exports = {
   development: {
     rootPath: rootPath,
-    db: 'mongodb+srv://admin:admin@oblak.qnbmf.mongodb.net/Balasnet?retryWrites=true&w=majority',
-    port: 5000
+    db: process.env.MONGO_URL,
+    port: 5000,
   },
-  staging: {
-  },
+  staging: {},
   production: {
-    port: process.env.PORT
-  }
-}
+    port: process.env.PORT,
+    db: process.env.MONGO_URL,
+  },
+};
